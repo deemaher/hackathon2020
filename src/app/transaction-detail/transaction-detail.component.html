@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="webchat" role="main"></div>
+    <script src="https://cdn.botframework.com/botframework-webchat/master/webchat.js"></script>
+    <script>
+        const directLine = window.WebChat.createDirectLine({
+            token: 'DfFIcLdyf9Y.VQlTrnQNESFG3E8TzbrmCnM6kqhFbrhcrWBnMRjtKq8',
+        });
+        window.WebChat.renderWebChat({
+            directLine: directLine,
+            userID: "dMMKgWsJKgkM73Um,00000000000000000001234",
+            locale: 'en-US',
+            botAvatarInitials: 'Bot',
+            userAvatarInitials: 'ME',
+        }, document.getElementById('webchat'));
+        document.querySelector('#webchat > *').focus();
+    </script>
+</body>
+</html>

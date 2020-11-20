@@ -1,0 +1,16 @@
+th {
+background-color: #F7F7F7;
+}
+
+tbody{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+table{
+margin-bottom: 0px;
+}
+
+h5{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 10px;
+  box-shadow: 2px 5px lightgrey;
+}

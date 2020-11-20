@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-transactions',
   templateUrl: './transactions.component.html',
-  styleUrls: ['./transactions.component.css'],
+  styleUrls: ['./transactions.component.css']
 })
-export class TransactionsComponent implements OnInit {
+export class TransactionsComponent{
+ parentExample: string = '';
+
   data = [
     {
       date: 'Nov 16, 2020',
@@ -79,10 +82,13 @@ export class TransactionsComponent implements OnInit {
           arn: '20292029202920292029009',
         },
       ],
-    },
+    }
   ];
 
-  constructor() {}
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {}
+  initTransactionDetails(merchantId:string,arn:string){
+    this.parentExample=merchantId+','+arn;
+    window.location.href="assets/chatbot.html?userId="+this.parentExample;
+  }
 }
