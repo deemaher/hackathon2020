@@ -1,20 +1,33 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <div id="webchat" role="main"></div>
-    <script src="https://cdn.botframework.com/botframework-webchat/master/webchat.js"></script>
-    <script>
-        const directLine = window.WebChat.createDirectLine({
-            token: 'DfFIcLdyf9Y.VQlTrnQNESFG3E8TzbrmCnM6kqhFbrhcrWBnMRjtKq8',
-        });
-        window.WebChat.renderWebChat({
-            directLine: directLine,
-            userID: "dMMKgWsJKgkM73Um,00000000000000000001234",
-            locale: 'en-US',
-            botAvatarInitials: 'Bot',
-            userAvatarInitials: 'ME',
-        }, document.getElementById('webchat'));
-        document.querySelector('#webchat > *').focus();
-    </script>
-</body>
-</html>
+
+<h5>
+    <div style="text-align: left;height: 60px;">
+    <svg style="margin: 20px;color:#0093FF;"width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg" (click)="back()">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+      </svg> 
+      <img style="float:right; margin: 10px;" class="mb-4" src="assets/batman.png" alt="" width="50" height="50">
+    </div>
+</h5>
+<h4 style="margin-bottom: 25px;">
+    <div style="text-align: center;background-color: #F7F7F7; padding: 20px;">
+        Platinum Mastercard
+    </div>
+</h4>
+<div style="text-align: center;color: #747474;">
+    Appears on the statement as <span><b>{{descriptor}}</b></span> 
+</div>
+<h2>
+<div style="text-align: center">
+    <span><b>${{amount}}</b></span> 
+</div>
+</h2>
+<div style="text-align: center;color: #747474; margin-bottom: 10px;">
+    Posted: <span style="color: black;"><b>{{date}}</b></span>
+</div>
+<h5 style="vertical-align:text-bottom; line-height: 40em; text-align: right;padding: 20px;color: #0093FF" (click)="openChatBot()">
+    <span style="padding: 10px;">Still need help ?</span>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        <path fill-rule="evenodd" d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+</h5>
+  

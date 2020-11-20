@@ -7,21 +7,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./transactions.component.css']
 })
 export class TransactionsComponent{
- parentExample: string = '';
+merchantId: string = '';
+ arn: string = "";
+ descriptor: string = '';
+ amount: string = '';
+ date: string = '';
 
   data = [
     {
       date: 'Nov 16, 2020',
       transaction: [
         {
-          descriptor: 'ethNinG',
-          amount: '6.95',
+          descriptor: '100 ETH ** NINJA GAM*',
+          amount: '31.75',
           merchantId: 'hqRvXt871lljT6Lk',
           arn: '20292029202920292029001',
         },
         {
-          descriptor: 'ethChr',
-          amount: '361.55',
+          descriptor: '#WWW.ETH*CHAIRS.CA',
+          amount: '39.15',
           merchantId: 'oKwDM8W8RzYP3vOl',
           arn: '20292029202920292029002',
         },
@@ -31,14 +35,14 @@ export class TransactionsComponent{
       date: 'Nov 15, 2020',
       transaction: [
         {
-          descriptor: 'ethAr',
-          amount: '655.69',
+          descriptor: 'AIR 2020',
+          amount: '1531.75',
           merchantId: 'rKQzW7r24w9uOTtu',
           arn: '20292029202920292029003',
         },
         {
-          descriptor: 'ethHotl',
-          amount: '27.00',
+          descriptor: 'ETH*HOTEL.COM NORTH YORK',
+          amount: '229.05',
           merchantId: 'PArVICpC8bAzlM9f',
           arn: '20292029202920292029004',
         },
@@ -48,13 +52,13 @@ export class TransactionsComponent{
       date: 'Nov 14, 2020',
       transaction: [
         {
-          descriptor: 'ethCarRt',
-          amount: '108.47',
+          descriptor: '+1 866-215-2883 ETHOCA',
+          amount: '227.75',
           merchantId: 'fwMmOY9T7gWAPoHH',
           arn: '20292029202920292029005',
         },
         {
-          descriptor: 'ethNinG',
+          descriptor: '100 ETH ** NINJA GAM*',
           amount: '43.45',
           merchantId: 'hqRvXt871lljT6Lk',
           arn: '20292029202920292029006',
@@ -65,8 +69,8 @@ export class TransactionsComponent{
       date: 'Nov 13, 2020',
       transaction: [
         {
-          descriptor: 'ethTk',
-          amount: '101.90',
+          descriptor: 'TTS ***    TICKETS.COM',
+          amount: '29.55',
           merchantId: 'BCU6w2giF67i9LH4',
           arn: '20292029202920292029007',
         },
@@ -87,8 +91,17 @@ export class TransactionsComponent{
 
   constructor(private router: Router) { }
 
-  initTransactionDetails(merchantId:string,arn:string){
-    this.parentExample=merchantId+','+arn;
-    window.location.href="assets/chatbot.html?userId="+this.parentExample;
+  initTransactionDetails(merchantId:string,arn:string, descriptor:string, amount: string, date: string){
+    this.merchantId=merchantId;
+    this.arn = arn;
+    this.descriptor = descriptor;
+    this.amount = amount;
+    this.date = date;
+
+    this.router.navigate(['transactionDetail', {merchantId: this.merchantId, arn: this.arn, descriptor: this.descriptor, amount: this.amount, date: this.date}]);
+  }
+
+  back(){
+    window.location.href="/";
   }
 }
