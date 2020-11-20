@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/3a3a3717-edbf-4924-80be-db1010fc87ab/resourceGroups/dj-rg/providers/Microsoft.Web/sites/morag-issuer-api-emulator",
+    "appService.deploySubpath": "."
+}

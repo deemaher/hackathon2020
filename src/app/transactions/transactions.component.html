@@ -1,0 +1,15 @@
+<table class="table table-hover">
+  <tbody>
+    <tr *ngFor="let d of data">
+      <table class="table table-hover">
+        <thead>
+          <th>{{ d.date }}</th>
+        </thead>
+        <tr *ngFor="let t of d.transaction">
+          <td>{{ t.descriptor }}</td>
+          <td>{{ t.amount }}</td>
+        </tr>
+      </table>
+    </tr>
+  </tbody>
+</table>
